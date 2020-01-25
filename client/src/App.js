@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import PlayersList from "./components/PlayersList";
+import Header from "./components/Header";
 import './App.css';
 
 class App extends Component {
@@ -21,8 +22,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Players</h1>
-        <PlayersList players={this.state.players} />
+        <Header />
+        <PlayersList data-testid="players-list" players={this.state.players} />
       </div>
     )
   }
